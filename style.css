@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #222;
+}
+
+header .logo { width: 120px; }
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+nav a:hover { color: #ffcc00; }
+
+.hero {
+    height: 60vh;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3em; margin: 0; }
+.hero p { font-size: 1.2em; }
+
+.contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 5%;
+    gap: 20px;
+}
+
+.carte {
+    width: 30%;
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.carte img { width: 100%; display: block; }
+.carte h3 { margin: 15px; }
+.carte p { margin: 0 15px 15px 15px; }
+
+.carte:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+.contact {
+    padding: 40px 5%;
+    text-align: center;
+    background-color: #222;
+}
+
+.contact h2 { margin-bottom: 20px; }
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    color: #111;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover { background-color: #ffd633; }
+
+/* TABLETTE */
+@media (max-width: 1024px) { .carte { width: 45%; } }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    header { flex-direction: column; text-align: center; }
+    nav a { display: block; margin: 10px 0; }
+    .carte { width: 100%; }
+    .contact form { width: 90%; }
+    .hero h1 { font-size: 2em; }
+    .hero p { font-size: 1em; }
+}
